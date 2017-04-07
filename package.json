@@ -1,17 +1,40 @@
 {
-    "buildNpmdoc":"hook.io",
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "buildNpmdoc": "hook.io",
+    "description": "api documentation for hook.io (v1.0.0) [![npm package](https://img.shields.io/npm/v/npmdoc-hook.io.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-hook.io) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-hook.io.svg)](https://travis-ci.org/npmdoc/node-npmdoc-hook.io)",
     "devDependencies": {
-        "hook.io": "*",
         "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "hook.io": "*",
         "utility2": "kaizhu256/node-utility2#alpha"
     },
-    "name":"npmdoc-hook.io",
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmdoc/node-npmdoc-hook.io",
+    "keywords": [
+        "documentation",
+        "hook.io"
+    ],
+    "license": "MIT",
+    "main": "lib.npmdoc_hook.io.js",
+    "name": "npmdoc-hook.io",
+    "nameAlias": "npmdoc_hook_io",
+    "nameOriginal": "npmdoc-hook.io",
+    "os": [
+        "darwin",
+        "linux"
+    ],
     "repository": {
         "type": "git",
         "url": "https://github.com/npmdoc/node-npmdoc-hook.io"
     },
     "scripts": {
-        "build-ci": "utility2 shReadmeTest build_ci.sh"
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "(set -e; npm install \"kaizhu256/node-utility2#alpha\"; utility2 shDeployHeroku)",
+        "postinstall": "if [ -f npm_scripts.sh ]; then ./npm_scripts.sh postinstall; fi",
+        "start": "(set -e; export PORT=${PORT:-8080}; utility2 start test.js)",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
     },
     "version": "0.0.1"
 }
