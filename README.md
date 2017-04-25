@@ -1,6 +1,6 @@
 # npmdoc-hook.io
 
-#### api documentation for  hook.io (v1.0.0)  [![npm package](https://img.shields.io/npm/v/npmdoc-hook.io.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-hook.io) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-hook.io.svg)](https://travis-ci.org/npmdoc/node-npmdoc-hook.io)
+#### basic api documentation for  hook.io (v1.0.0)  [![npm package](https://img.shields.io/npm/v/npmdoc-hook.io.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-hook.io) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-hook.io.svg)](https://travis-ci.org/npmdoc/node-npmdoc-hook.io)
 
 ####
 
@@ -44,7 +44,8 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
-    "version": "1.0.0"
+    "version": "1.0.0",
+    "bin": {}
 }
 ```
 
